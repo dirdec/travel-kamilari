@@ -8,3 +8,10 @@ img {
   height: auto;
 }
 
+* {
+  /*
+  let browser take all into account when calculating widths based
+  on percentages of element's width property  
+  */
+  box-sizing: border-box;
+}

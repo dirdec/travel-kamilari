@@ -1,0 +1,34 @@
+@define-mixin atSmall{
+  @media(min-width: 530px){
+    @mixin-content;
+  } 
+}
+
+@define-mixin atMedium{
+  @media(min-width: 800px){
+    @mixin-content;
+  } 
+}
+
+@define-mixin atLarge{
+  @media(min-width: 1200px){
+    @mixin-content;
+  } 
+}
+
+
+@define-mixin clearfix{
+  /*
+  next 'injects' content after the floated elements
+  hereby making the .row realize that it has some content
+  to display
+  
+  use this in stead of adding empty div with 'clear' class
+  in the html
+  */
+  &::after{
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
